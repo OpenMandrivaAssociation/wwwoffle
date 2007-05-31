@@ -9,7 +9,7 @@ Release:	%{release}
 License:	GPL
 Group:		Networking/Other
 Source0:	ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/%name-%version.tar.bz2
-Source1:	%{name}-initfile.bz2
+Source1:	%{name}-initfile
 URL:		http://www.gedanken.demon.co.uk/wwwoffle/
 Buildrequires:	flex
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -56,7 +56,7 @@ mkdir -p $RPM_BUILD_ROOT%{_mandir}/man[158]
 
 #install -m 755 upgrade* $RPM_BUILD_ROOT/usr/sbin/
 
-bzcat %{SOURCE1} > $RPM_BUILD_ROOT%{_initrddir}/wwwoffled
+cp %{SOURCE1} $RPM_BUILD_ROOT%{_initrddir}/wwwoffled
 
 cat > $RPM_BUILD_ROOT%{_sysconfdir}/cron.weekly/%{name} <<EOF
 #!/bin/sh
