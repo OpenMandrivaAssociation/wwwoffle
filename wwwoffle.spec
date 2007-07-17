@@ -1,5 +1,5 @@
-%define	version	2.9b
-%define	release	%mkrel 2
+%define	version	2.9c
+%define	release	%mkrel 1
 %define	name	wwwoffle
 
 Summary:	WWW Offline Explorer - Caching Web Proxy Server
