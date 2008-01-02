@@ -12,6 +12,7 @@ Source0:	ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/%name-%version.tar.bz2
 Source1:	%{name}-initfile
 URL:		http://www.gedanken.demon.co.uk/wwwoffle/
 Buildrequires:	flex
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	htdig
  
 %description
