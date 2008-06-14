@@ -1,5 +1,5 @@
-%define	version	2.9c
-%define	release	%mkrel 2
+%define	version	2.9d
+%define	release	%mkrel 1
 %define	name	wwwoffle
 
 Summary:	WWW Offline Explorer - Caching Web Proxy Server
@@ -14,7 +14,7 @@ URL:		http://www.gedanken.demon.co.uk/wwwoffle/
 Buildrequires:	flex
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	htdig
- 
+
 %description
 A proxy HTTP/FTP server for computers with dial-up internet access.
 - Caching of pages viewed while connected for review later.
@@ -87,10 +87,10 @@ fi
 
 %preun
 %{_initrddir}/wwwoffled status | grep running && %{_initrddir}/wwwoffled stop
-if [ $1 = 0 ]; then    
+if [ $1 = 0 ]; then
 	# execute this only if we are NOT doing an upgrade
 	/sbin/chkconfig --del wwwoffled
-fi          
+fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
