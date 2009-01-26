@@ -1,4 +1,4 @@
-%define	version	2.9d
+%define	version	2.9e
 %define	release	%mkrel 1
 %define	name	wwwoffle
 
