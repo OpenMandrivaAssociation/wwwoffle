@@ -1,16 +1,16 @@
-%define	version	2.9e
-%define	release	%mkrel 2
+%define	version	2.9f
+%define	release	%mkrel 1
 %define	name	wwwoffle
 
 Summary:	WWW Offline Explorer - Caching Web Proxy Server
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-License:	GPL
+License:	GPLv2
 Group:		Networking/Other
 Source0:	ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/%name-%version.tar.bz2
 Source1:	%{name}-initfile
-URL:		http://www.gedanken.demon.co.uk/wwwoffle/
+URL:		http://www.gedanken.demon.co.uk/%{name}/
 Buildrequires:	flex
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	htdig
@@ -31,7 +31,7 @@ A proxy HTTP/FTP server for computers with dial-up internet access.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 
 %make all \
 	CFLAGS="$RPM_OPT_FLAGS"
