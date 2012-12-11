@@ -1,0 +1,53 @@
+#!/bin/sh
+#
+# chkconfig: 345 86 16
+# description: The wwwoffle daemon acts as an (online or offline) proxy for the web
+#
+### BEGIN INIT INFO
+# Provides: wwwoffle
+# Short-Description: The wwwoffle daemon acts as an (online or offline) proxy for the web
+# Default-Start: 3 4 5
+# Required-Start: $network $syslog
+# Should-Start: $named
+### END INIT INFO
+#
+# Author[s]:
+#	Marc Merlin	<marcsoft@magic.metawire.com>
+
+. /etc/rc.d/init.d/functions
+
+# Source networking configuration.
+. /etc/sysconfig/network
+
+# Check that networking is up.
+[ ${NETWORKING} = "no" ] && exit 0
+
+# See how we were called.
+case "$1" in
+  start)
+	echo -n "Loading wwwoffled: "
+	daemon /usr/sbin/wwwoffled -c /etc/wwwoffle.conf
+	echo
+	touch /var/lock/subsys/wwwoffled
+	;;
+  stop)	
+	echo -n "Shutting down wwwoffled: "
+	killproc wwwoffled
+	echo
+	rm -f /var/lock/subsys/wwwoffled
+	;;
+  status)
+        status wwwoffled
+        ;;
+  restart|reload)
+        $0 stop
+        $0 start
+        ;; 
+	*)
+	echo "Usage: wwwoffled {start|stop|status|restart|reload}"
+	exit 1
+esac
+
+exit 0
+
+# === End of File ===

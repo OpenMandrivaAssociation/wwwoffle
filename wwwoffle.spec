@@ -117,3 +117,68 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/*
 
 
+
+
+%changelog
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 2.9f-2mdv2011.0
++ Revision: 615463
+- the mass rebuild of 2010.1 packages
+
+* Sat Mar 06 2010 Sandro Cazzaniga <kharec@mandriva.org> 2.9f-1mdv2010.1
++ Revision: 515249
+- fix license
+- use %%configure2_5
+- update to 2.9f
+
+* Sun Sep 20 2009 Thierry Vignaud <tv@mandriva.org> 2.9e-2mdv2010.0
++ Revision: 445826
+- rebuild
+
+* Mon Jan 26 2009 J茅r么me Soyer <saispo@mandriva.org> 2.9e-1mdv2009.1
++ Revision: 333716
+- New upstream release
+
+* Sat Jun 14 2008 J茅r么me Soyer <saispo@mandriva.org> 2.9d-1mdv2009.0
++ Revision: 219151
+- New release 2.9d
+
+* Thu Jan 03 2008 Olivier Blin <oblin@mandriva.com> 2.9c-2mdv2008.1
++ Revision: 140933
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Wed Sep 19 2007 Guillaume Rousse <guillomovitch@mandriva.org> 2.9c-2mdv2008.0
++ Revision: 90357
+- rebuild
+
+* Tue Jul 17 2007 J茅r么me Soyer <saispo@mandriva.org> 2.9c-1mdv2008.0
++ Revision: 53061
+- New release 2.9c
+
+* Thu May 31 2007 Gustavo De Nardin <gustavodn@mandriva.com> 2.9b-2mdv2008.0
++ Revision: 33046
+- LSB init headers
+- bunzipped init file
+
+
+* Sun Feb 18 2007 J茅r么me Soyer <saispo@mandriva.org> 2.9b-1mdv2007.0
++ Revision: 122462
+- New release 2.9b
+
+  + Gustavo De Nardin <gustavodn@mandriva.com>
+
+* Wed Mar 01 2006 Nicolas L閏ureuil <neoclust@mandriva.org> 2.8e-1mdk
+- 2.8e
+- Make rpmbuildupdate happy
+- use mkrel
+
+* Fri Jan 14 2005 Per 脴yvind Karlsen <peroyvind@linux-mandrake.com> 2.8d-1mdk
+- 2.8d
+- use %%configure macro
+- fix conffile-without-noreplace-flag
+
+* Thu Jul 29 2004 Per 貀vind Karlsen <peroyvind@linux-mandrake.com> 2.8c-1mdk
+- 2.8c
+
