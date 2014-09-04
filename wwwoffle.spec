@@ -1,7 +1,7 @@
 Summary:	WWW Offline Explorer - Caching Web Proxy Server
 Name:		wwwoffle
 Version:	2.9i
-Release:	1
+Release:	3
 License:	GPLv2
 Group:		Networking/Other
 Source0:	ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/%{name}-%{version}.tgz
@@ -75,10 +75,13 @@ rm -rf %{buildroot}/usr/doc
 rm -rf %{buildroot}/var/spool/wwwoffle/outgoing/*
 
 %post
-%_post_service %{name}d
+%systemd_post %{name}d.service
 
 %preun
-%_preun_service %{name}d
+%systemd_preun %{name}d.service
+
+%postun
+%systemd_postun_with_restart %{name}d.service
 
 %files
 %dir /var/spool/wwwoffle
