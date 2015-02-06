@@ -1,7 +1,7 @@
 Summary:	WWW Offline Explorer - Caching Web Proxy Server
 Name:		wwwoffle
 Version:	2.9i
-Release:	3
+Release:	4
 License:	GPLv2
 Group:		Networking/Other
 Source0:	ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/%{name}-%{version}.tgz
