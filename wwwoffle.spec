@@ -7,6 +7,11 @@ Group:		Networking/Other
 Source0:	ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/%{name}-%{version}.tgz
 Source1:	%{name}.service
 URL:		https://www.gedanken.demon.co.uk/%{name}/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires:	flex
 Buildrequires:	htdig-devel
 Requires:	htdig
